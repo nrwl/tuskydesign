@@ -3,9 +3,16 @@
   "name": "shared-ui",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
-    "build": "rm -rf dist && tsc"
+    "build": "tsup ./index.tsx --format esm,cjs --dts --external react",
+    "dev": "tsup ./index.tsx --format esm,cjs --watch --dts --external react",
+    "typecheck": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +22,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "tsup": "6.2.2",
     "typescript": "^4.6.4"
   }
 }
