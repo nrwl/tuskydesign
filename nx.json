@@ -16,6 +16,9 @@
     "defaultBase": "main"
   },
   "release": {
-    "projects": ["*", "!@tuskdesign/demo"]
+    "projects": ["*", "!@tuskdesign/demo"],
+    "version": {
+      "conventionalCommits": true
+    }
   }
 }
