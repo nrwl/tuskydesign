@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "shared-ui",
+  "name": "@tuskdesign/buttons",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
