@@ -1,10 +1,13 @@
 {
-  "name": "pnpm-monorepo",
+  "name": "@tuskdesign/source",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {},
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nx": "18.0.3"
+  }
 }
