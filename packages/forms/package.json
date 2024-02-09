@@ -1,5 +1,5 @@
 {
-  "name": "@tuskdesign/buttons",
+  "name": "@tuskdesign/forms",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -18,7 +18,8 @@
   "license": "ISC",
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@tuskdesign/buttons": "workspace:*"
   },
   "devDependencies": {
     "tsup": "6.2.2",

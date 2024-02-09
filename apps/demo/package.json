@@ -12,7 +12,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@tuskdesign/buttons": "workspace:*"
+    "@tuskdesign/buttons": "workspace:*",
+    "@tuskdesign/forms": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

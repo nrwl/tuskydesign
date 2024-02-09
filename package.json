@@ -9,5 +9,8 @@
   "license": "ISC",
   "devDependencies": {
     "nx": "18.0.3"
+  },
+  "dependencies": {
+    "@nx/js": "^18.0.3"
   }
 }
