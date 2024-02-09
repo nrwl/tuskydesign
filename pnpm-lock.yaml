@@ -81,7 +81,7 @@ importers:
   packages/forms:
     dependencies:
       '@tuskdesign/buttons':
-        specifier: 1.1.0
+        specifier: 1.2.0
         version: link:../buttons
       react:
         specifier: ^18.2.0
