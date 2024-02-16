@@ -1,5 +1,6 @@
 {
   "name": "@tuskdesign/source",
+  "workspaces": ["packages/*", "apps/*"],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,10 +8,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "nx": "18.0.3"
-  },
-  "dependencies": {
-    "@nx/js": "^18.0.3"
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
