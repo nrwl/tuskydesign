@@ -1,6 +1,6 @@
 {
   "name": "@tuskdesign/source",
-  "workspaces": ["packages/*", "apps/*"],
+  "workspaces": ["apps/*", "packages/*"],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
