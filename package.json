@@ -1,6 +1,9 @@
 {
   "name": "@tuskdesign/source",
-  "workspaces": ["packages/*", "apps/*"],
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +11,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "@nx/vite": "^18.1.0-canary.20240222-5d6abe4",
+    "@nx/web": "18.1.0-canary.20240222-5d6abe4",
+    "@vitest/ui": "^1.0.4",
+    "nx": "18.1.0-canary.20240222-5d6abe4",
+    "vite": "~5.0.0",
+    "vitest": "^1.0.4"
+  },
   "dependencies": {}
 }
