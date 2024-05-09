@@ -1,0 +1,21 @@
+name: Upload Impacted Targets
+run-name: Upload Impacted Targets for ${{ github.ref_name }}
+on: pull_request
+
+jobs:
+  compute_impacted_targets:
+    name: Compute Impacted Targets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Compute Impacted Targets
+        uses: trunk-io/nx-merge-action@main
+        with:
+          trunk-token: ${{ secrets.TRUNK_ORG_TOKEN }}
+          verbose: "true"
+        env:
+          API_URL: https://api.trunk-staging.io:443/v1/setImpactedTargets
