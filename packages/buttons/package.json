@@ -1,7 +1,10 @@
 {
   "name": "@taki_layer/buttons",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
