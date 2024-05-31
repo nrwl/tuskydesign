@@ -1,6 +1,6 @@
 {
   "name": "@tuskdesign/forms",
-  "version": "1.2.0",
+  "version": "1.2.1-0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -19,7 +19,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@tuskdesign/buttons": "1.2.0"
+    "@tuskdesign/buttons": "1.2.1-0"
   },
   "devDependencies": {
     "tsup": "6.2.2",
