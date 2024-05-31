@@ -1,6 +1,9 @@
 {
-  "name": "@tuskdesign/source",
-  "workspaces": ["packages/*", "apps/*"],
+  "name": "@taki_layer/source",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +11,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "@nx/js": "^19.1.1",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "1.5.7",
+    "@swc/helpers": "~0.5.11",
+    "nx": "19.1.1",
+    "prettier": "^2.6.2"
+  },
   "dependencies": {}
 }

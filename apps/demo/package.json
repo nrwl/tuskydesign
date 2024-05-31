@@ -1,5 +1,5 @@
 {
-  "name": "@tuskdesign/demo",
+  "name": "@taki_layer/demo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,8 +14,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@tuskdesign/buttons": "*",
-    "@tuskdesign/forms": "*"
+    "@taki_layer/buttons": "*",
+    "@taki_layer/forms": "*"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

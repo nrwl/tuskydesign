@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button } from '@tuskdesign/buttons';
+import { Button } from '@taki_layer/buttons';
 
 export function TuskForm(props: any) {
   return;
