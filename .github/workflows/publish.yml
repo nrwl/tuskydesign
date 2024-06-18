@@ -1,0 +1,101 @@
+name: publish
+
+on:
+  push: 
+    branches:
+      - main
+    tags:
+      - '*'
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  node-version: '20.x'
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          cache: "npm"
+          node-version: ${{ env.node-version }}
+          registry-url: "https://registry.npmjs.org"
+          always-auth: true
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        id: cache_node_modules
+        with:
+          # check diff of package.json and package-lock.json
+          key: ${{ runner.os }}-build-node_modules-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/package.json') }}
+          path: "**/node_modules"
+
+      - name: Install dependencies
+        if: steps.cache_node_modules.outputs.cache-hit != 'true'
+        run: npm install
+
+      - name: Build
+        run: npm run build:all
+
+  release-buttons:
+    if: contains(github.ref, 'tags/buttons')
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if package version can be published
+        uses: technote-space/package-version-check-action@v1
+        with:
+          PACKAGE_DIR: 'packages/buttons/'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PACKAGE_MANAGER: npm
+      - name: Publish buttons package
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc && npm run publish:buttons
+  
+  release-forms:
+    if: contains(github.ref, 'tags/forms')
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if package version can be published
+        uses: technote-space/package-version-check-action@v1
+        with:
+          PACKAGE_DIR: 'packages/forms/'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PACKAGE_MANAGER: npm
+      - name: Publish forms package
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc && npm run publish:forms
+
+  release-all:
+   if: cotains(github.ref, 'tags/all')
+   needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if buttons package version can be published
+        uses: technote-space/package-version-check-action@v1
+        with:
+          PACKAGE_DIR: 'packages/buttons/'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PACKAGE_MANAGER: npm
+      - name: Check if forms package version can be published
+        uses: technote-space/package-version-check-action@v1
+        with:
+          PACKAGE_DIR: 'packages/forms/'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PACKAGE_MANAGER: npm
+      - name: Publish buttons package
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc && npm run publish:buttons
+      - name: Publish forms package
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc && npm run publish:forms
+
+
+
+
+      
+    

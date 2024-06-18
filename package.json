@@ -7,7 +7,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build:all": "nx run-many --target=build --all",
+    "publish:buttons": "nx release --projects @taki_layer/buttons",
+    "publish:forms": "nx release --projects @taki_layer/forms"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
