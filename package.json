@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@nx/vite": "^19.6.4",
     "nx": "19.6.4"
-  },
-  "dependencies": {}
+  }
 }
