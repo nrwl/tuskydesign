@@ -1,6 +1,9 @@
 {
   "name": "@tuskdesign/source",
-  "workspaces": ["packages/*", "apps/*"],
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +11,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "@nx/vite": "^19.6.4",
+    "nx": "19.6.4"
+  }
 }
