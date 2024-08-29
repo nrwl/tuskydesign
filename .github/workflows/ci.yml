@@ -1,9 +1,8 @@
 name: CI
-  push:
-    branches:
-      # Change this if your primary branch is not main
-      - main
+on:
   pull_request:
+    branches:
+      - main
 jobs:
   main:
     runs-on: ubuntu-latest
