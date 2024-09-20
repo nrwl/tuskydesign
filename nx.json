@@ -1,7 +1,9 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "release": {
-    "projects": ["packages/*"]
+    "projects": [
+      "packages/*"
+    ]
   },
   "targetDefaults": {
     "build": {
@@ -31,5 +33,6 @@
         "typecheckTargetName": "vite:typecheck"
       }
     }
-  ]
+  ],
+  "nxCloudId": "66edb02cb8a7175069df644d"
 }
