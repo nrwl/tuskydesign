@@ -1,6 +1,6 @@
 {
-  "name": "@tuskdesign/buttons",
-  "version": "9.2.0",
+  "name": "@danhnguyenasnet/buttons",
+  "version": "9.3.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
