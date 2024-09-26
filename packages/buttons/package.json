@@ -1,6 +1,6 @@
 {
   "name": "@tuskdesign/buttons",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -23,5 +23,8 @@
   "devDependencies": {
     "tsup": "6.2.2",
     "typescript": "^4.6.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
