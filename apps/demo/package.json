@@ -1,5 +1,5 @@
 {
-  "name": "@tuskdesign/demo",
+  "name": "@danhnguyenasnet/demo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,8 +14,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@tuskdesign/buttons": "*",
-    "@tuskdesign/forms": "*"
+    "@danhnguyenasnet/buttons": "*",
+    "@danhnguyenasnet/forms": "*"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
