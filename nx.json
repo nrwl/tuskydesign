@@ -34,5 +34,13 @@
       "packages/*"
     ]
   },
-  "nxCloudId": "670c861022b1a18844d39453"
+  "nxCloudId": "670c861022b1a18844d39453",
+  "namedInputs": {
+    "sharedGlobals": [
+      "{workspaceRoot}/.github/workflows/ci.yml"
+    ],
+    "default": [
+      "sharedGlobals"
+    ]
+  }
 }
