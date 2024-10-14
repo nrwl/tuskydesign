@@ -3,7 +3,10 @@
   "defaultBase": "main",
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build", "typecheck"],
+      "dependsOn": [
+        "^build",
+        "typecheck"
+      ],
       "cache": true
     },
     "typecheck": {
@@ -26,8 +29,10 @@
       }
     }
   ],
-
   "release": {
-    "projects": ["packages/*"]
-  }
+    "projects": [
+      "packages/*"
+    ]
+  },
+  "nxCloudId": "670c861022b1a18844d39453"
 }
