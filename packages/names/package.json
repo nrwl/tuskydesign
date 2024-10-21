@@ -1,5 +1,5 @@
 {
-  "name": "@tuskdesign/buttons",
+  "name": "@tuskdesign/names",
   "version": "1.2.0",
   "description": "",
   "main": "./dist/index.js",
@@ -9,19 +9,16 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup ./index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup ./index.tsx --format esm,cjs --watch --dts --external react",
+    "build": "tsc --build tsconfig.lib.json",
     "typecheck": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "tsup": "6.2.2",
-    "typescript": "^4.6.4"
+    "@types/node": "18.16.9",
+    "typescript": "~5.5.2"
   }
 }

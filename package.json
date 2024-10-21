@@ -1,6 +1,8 @@
 {
   "name": "@tuskdesign/source",
-  "workspaces": ["packages/*", "apps/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +10,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {},
+  "devDependencies": {
+    "tslib": "^2.8.0",
+    "typescript": "~5.5.2"
+  },
   "dependencies": {}
 }
