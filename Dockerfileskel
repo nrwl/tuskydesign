@@ -1,0 +1,10 @@
+FROM  node:20
+
+ARG APP_NAME
+
+#RUN apt-get remove --purge libde265-0 libaprutil1 libapr1 curl libcurl3-gnutls libcurl4 libcurl4-openssl-dev linux-libc-dev libwebp-dev libwebp7 libwebpdemux2 libwebpmux3 openssh-client -y
+
+WORKDIR /app
+COPY package.json package.json
+COPY package-lock.json package-lock.json
+RUN npm install
