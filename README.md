@@ -21,3 +21,8 @@ Run all tasks with a specific name:
 ```bash
 npx nx run-many -t typecheck
 ```
+
+After creating a new library, moving code into it, and updating references to code, rebuild the workspace to sync the workspace:
+```bash
+npx nx run-many -t build
+```
