@@ -26,3 +26,10 @@ After creating a new library, moving code into it, and updating references to co
 ```bash
 npx nx run-many -t build
 ```
+
+To create a CI workflow:
+```bash
+npx nx connect
+
+npx nx generate @nx/workspace:ci-workflow --ci-github
+```
