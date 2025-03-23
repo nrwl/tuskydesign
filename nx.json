@@ -23,6 +23,10 @@
     }
   },
   "defaultBase": "main",
+  "release": {
+    "projects": ["packages/*"],
+    "projectsRelationship": "independent"
+  },
   "plugins": [
     {
       "plugin": "@nx/js/typescript",
