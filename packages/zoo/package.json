@@ -1,6 +1,7 @@
 {
   "name": "@tuskdesign/zoo",
   "version": "1.2.0",
+  "type": "module",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
