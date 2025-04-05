@@ -39,11 +39,11 @@ jobs:
         run: npm ci # Uses package-lock.json for deterministic installs
 
       - name: Run Affected Type Check
-        run: npx nx affected --target=typecheck --base=origin/main --parallel=3 --scan
+        run: npx nx affected --target=typecheck --base=origin/main --parallel=3
 
       - name: Run Affected Build
-        run: npx nx affected --target=build --base=origin/main --parallel=3 --scan
+        run: npx nx affected --target=build --base=origin/main --parallel=3
 
       # Uncomment if needed:
       # - name: Run Affected Test
-      #   run: npx nx affected --target=test --base=origin/main --parallel=3 --scan
+      #   run: npx nx affected --target=test --base=origin/main --parallel=3
