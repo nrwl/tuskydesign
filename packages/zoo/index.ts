@@ -4,4 +4,4 @@ import { getRandomName } from "@tuskdesign/names";
 const name = getRandomName();
 const animal = getRandomAnimal();
 
-console.log(`${name} the ${animal.name} says ${animal.sound}!`);
+console.log(`${name} the ${animal.name} says ${animal.sound}!!!`);
