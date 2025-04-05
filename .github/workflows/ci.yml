@@ -21,18 +21,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install PNPM (auto-detect version)
+        uses: pnpm/action-setup@v4
+        with:
+          # Omit version input to use the version in the packageManager field of package.json
+          # version: 10
+          run_install: false # We'll run `pnpm install` manually later
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: "package.json"
           cache: "pnpm"
-
-      - name: Install PNPM (auto-detect version)
-        uses: pnpm/action-setup@v4
-        with:
-          # Omit version input to use the version in the packageManager field of package.json
-          version: 10
-          run_install: false # We'll run `pnpm install` manually later
 
       - name: Set pnpm store directory
         run: pnpm config set store-dir ~/.pnpm-store
