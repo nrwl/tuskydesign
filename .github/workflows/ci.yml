@@ -1,0 +1,64 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - "release/*"
+      - "hotfix/*"
+      - "bugfix/*"
+
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  nx-affected:
+    name: Nx Affected (Build, Typecheck)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: "package.json"
+          cache: "pnpm"
+
+      - name: Install PNPM (auto-detect version)
+        uses: pnpm/action-setup@v4
+        with:
+          # Omit version input to use the version in the packageManager field of package.json
+          run_install: false # We'll run `pnpm install` manually later
+
+      - name: Set pnpm store directory
+        run: pnpm config set store-dir ~/.pnpm-store
+
+      - name: Cache pnpm store
+        uses: actions/cache@v4
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Cache Nx
+        uses: actions/cache@v4
+        with:
+          path: |
+            .nx/cache
+          key: ${{ runner.os }}-nx-${{ hashFiles('nx.json', '**/project.json') }}
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run Affected Type Check
+        run: pnpm exec nx affected --target=typecheck --base=origin/main --parallel=3 --scan
+
+      - name: Run Affected Build
+        run: pnpm exec nx affected --target=build --base=origin/main --parallel=3 --scan
+
+    #   - name: Run Affected Test
+    #     run: pnpm exec nx affected --target=test --base=origin/main --parallel=3 --scan

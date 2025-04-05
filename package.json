@@ -15,5 +15,9 @@
     "typescript": "~5.5.2",
     "nx": "20.7.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "packageManager": ">=pnpm@10.0.0"
 }
