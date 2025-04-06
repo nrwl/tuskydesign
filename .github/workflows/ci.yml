@@ -34,6 +34,8 @@ jobs:
           path: |
             .nx/cache
           key: ${{ runner.os }}-nx-${{ hashFiles('nx.json', '**/project.json') }}
+          restore-keys: |
+            ${{ runner.os }}-nx-
 
       - name: Install dependencies
         run: npm ci # Uses package-lock.json for deterministic installs
