@@ -7,8 +7,12 @@
       ]
     },
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
       "cache": true
     },
     "typecheck": {
@@ -31,5 +35,6 @@
         }
       }
     }
-  ]
+  ],
+  "nxCloudId": "684146838411f26f3fdabc87"
 }
