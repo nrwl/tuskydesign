@@ -1,3 +1,7 @@
+# 3.0.0 (2025-06-08)
+
+This was a version bump only, there were no code changes.
+
 # 2.0.0 (2025-06-08)
 
 ### 🚀 Features
