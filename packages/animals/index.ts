@@ -1,1 +1,1 @@
-export * from './animals';
+export * from './animals.js';

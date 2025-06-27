@@ -1,5 +1,6 @@
 {
   "name": "@tuskdesign/names",
+  "type": "module",
   "version": "1.2.0",
   "description": "",
   "main": "./dist/index.js",
