@@ -10,8 +10,6 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsc --build tsconfig.lib.json",
-    "typecheck": "tsc"
   },
   "keywords": [],
   "author": "",
