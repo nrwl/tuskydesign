@@ -1,7 +1,7 @@
 {
   "name": "@tuskdesign/names",
   "type": "module",
-  "version": "1.2.0",
+  "version": "1.2.1-0",
   "description": "",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -9,13 +9,11 @@
   "files": [
     "dist/**"
   ],
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "18.16.9",
     "typescript": "~5.5.2"
