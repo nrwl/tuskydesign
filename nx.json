@@ -31,6 +31,7 @@
     }
   ],
   "release": {
-    "projects" :["packages/*", "!packages/zoo"]
+    "projects" :["packages/*"]
+
   }
 }
