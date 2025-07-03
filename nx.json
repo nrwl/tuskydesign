@@ -1,10 +1,10 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  
-  "release":{
-      "projects": ["packages/*"]
-    },
-
+  "release": {
+    "projects": [
+      "packages/*"
+    ]
+  },
   "targetDefaults": {
     "serve": {
       "dependsOn": [
@@ -43,5 +43,6 @@
         }
       }
     }
-  ]
+  ],
+  "nxCloudId": "6866bd2e12bcfa45577a7780"
 }
