@@ -1,3 +1,5 @@
+import { getRandomItem } from '@tuskdesign/util';
+
 export type Animal = {
   name: string;
   sound: string;
@@ -26,9 +28,6 @@ export const ANIMALS = [
   },
 ];
 
-export function getRandomItem<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
 
 export function getRandomAnimal() {
   return getRandomItem(ANIMALS);
