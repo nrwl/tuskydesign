@@ -5,11 +5,6 @@
       "packages/*"
     ]
   },
-  "release": {
-    "projects": [
-      "packages/*"
-    ]
-  },
   "targetDefaults": {
     "serve": {
       "dependsOn": [
@@ -50,6 +45,4 @@
     }
   ],
   "nxCloudId": "6866bd2e12bcfa45577a7780"
-  ],
-  "nxCloudId": "6866bca8e6776423c7f51656"
 }
