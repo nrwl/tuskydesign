@@ -1,25 +1,21 @@
 {
-  "name": "@tuskdesign/names",
-  "type": "module",
-  "version": "1.2.0",
-  "description": "",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist/**"
-  ],
-  "scripts": {
-    "build": "tsc --build tsconfig.lib.json",
-    "typecheck": "tsc"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-  },
-  "devDependencies": {
-    "@types/node": "18.16.9",
-    "typescript": "~5.5.2"
-  }
+	"name": "@tuskdesign/names",
+	"type": "module",
+	"version": "1.2.0",
+	"description": "",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist/**"
+	],
+	"scripts": {},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {},
+	"devDependencies": {
+		"@types/node": "18.16.9",
+		"typescript": "~5.5.2"
+	}
 }
